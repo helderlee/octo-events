@@ -230,9 +230,19 @@ Check the '*Issues*' option.
 
 Make sure only '*Issues*' option is selected and click on '*Add webhook*' button.
 
-Click on '*Issues*' tab to create a new issue.
+The browser will return to the '*Webhooks*' page and the icon will turn into a red triangle with an exclamation point inside of it. If you roll the mouse over the red triangle icon, you will see the message:
 
-Click on '*New issue*' button.
+```
+Last delivery was not successful. Invalid HTTP Response: 406.
+```
+
+It is totally fine because the first generated event was not an issue event and the message was rejected by the producer service as you can see at the producer terminal window with a log message:
+
+```
+ERROR d.h.o.p.handler.ProducerHandler - #: 2 schema violations found
+```
+
+To generate a correct issue event, click on '*Issues*' tab and click on '*New issue*' button.
 
 Type any title and any comment and click '*Submit new issue*' button.
 
