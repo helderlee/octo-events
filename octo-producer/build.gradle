@@ -1,0 +1,21 @@
+plugins {
+    id "application"
+}
+
+dependencies {
+    implementation "io.javalin:javalin:$javalin_version"
+
+    testImplementation "khttp:khttp:$khttp_version"
+
+    implementation project(':octo-common')
+}
+
+test {
+    testLogging.showStandardStreams = true
+    testLogging {
+        events "started", "passed", "skipped", "failed"
+    }
+    useJUnitPlatform {}
+}
+
+mainClassName = 'dev.helderlee.octo.producer.BootRun'

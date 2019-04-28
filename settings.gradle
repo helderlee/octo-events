@@ -1,0 +1,6 @@
+rootProject.name = 'octo-events'
+include(':octo-common')
+include(':octo-persistence')
+include(':octo-producer')
+include(':octo-subscriber')
+include(':octo-query')

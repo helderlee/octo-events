@@ -1,0 +1,147 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "action",
+    "issue",
+    "sender"
+  ],
+  "properties": {
+    "action": {
+      "$id": "#/properties/action",
+      "type": "string",
+      "title": "The Action Schema",
+      "default": "",
+      "examples": [
+        "edited"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "issue": {
+      "$id": "#/properties/issue",
+      "type": "object",
+      "title": "The Issue Schema",
+      "required": [
+        "id",
+        "number",
+        "user",
+        "state",
+        "created_at",
+        "updated_at"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/issue/properties/id",
+          "type": "integer",
+          "title": "The Id Schema",
+          "default": 0,
+          "examples": [
+            327883526
+          ]
+        },
+        "number": {
+          "$id": "#/properties/issue/properties/number",
+          "type": "integer",
+          "title": "The Number Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "user": {
+          "$id": "#/properties/issue/properties/user",
+          "type": "object",
+          "title": "The User Schema",
+          "required": [
+            "login",
+            "id"
+          ],
+          "properties": {
+            "login": {
+              "$id": "#/properties/issue/properties/user/properties/login",
+              "type": "string",
+              "title": "The Login Schema",
+              "default": "",
+              "examples": [
+                "Codertocat"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "id": {
+              "$id": "#/properties/issue/properties/user/properties/id",
+              "type": "integer",
+              "title": "The Id Schema",
+              "default": 0,
+              "examples": [
+                21031067
+              ]
+            }
+          }
+        },
+        "state": {
+          "$id": "#/properties/issue/properties/state",
+          "type": "string",
+          "title": "The State Schema",
+          "default": "",
+          "examples": [
+            "open"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "created_at": {
+          "$id": "#/properties/issue/properties/created_at",
+          "type": "string",
+          "title": "The Created_at Schema",
+          "default": "",
+          "examples": [
+            "2018-05-30T20:18:32Z"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "updated_at": {
+          "$id": "#/properties/issue/properties/updated_at",
+          "type": "string",
+          "title": "The Updated_at Schema",
+          "default": "",
+          "examples": [
+            "2018-05-30T20:18:32Z"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "sender": {
+      "$id": "#/properties/sender",
+      "type": "object",
+      "title": "The Sender Schema",
+      "required": [
+        "login",
+        "id"
+      ],
+      "properties": {
+        "login": {
+          "$id": "#/properties/sender/properties/login",
+          "type": "string",
+          "title": "The Login Schema",
+          "default": "",
+          "examples": [
+            "Codertocat"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "id": {
+          "$id": "#/properties/sender/properties/id",
+          "type": "integer",
+          "title": "The Id Schema",
+          "default": 0,
+          "examples": [
+            21031067
+          ]
+        }
+      }
+    }
+  }
+}
