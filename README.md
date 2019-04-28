@@ -136,6 +136,12 @@ Wait for the log message to continue:
 Setting newly assigned partitions
 ```
 
+At the first time, the log message below may appear after the log message above and you can continue:
+
+```
+Resetting offset for partition
+```
+
 
 
 #### Starting the producer service
